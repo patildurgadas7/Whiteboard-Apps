@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <!-- SIDEBAR -->
+    <ScrollView
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:background="#EDE7F6">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <!-- STROKE -->
+            <Button android:text="Thin" android:onClick="setThin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button android:text="Medium" android:onClick="setMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button android:text="Thick" android:onClick="setThick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- COLORS -->
+            <Button android:text="Red" android:onClick="setRed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button android:text="Blue" android:onClick="setBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button android:text="Green" android:onClick="setGreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button android:text="Yellow" android:onClick="setYellow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- ACTIONS -->
+            <Button android:text="Eraser" android:onClick="setEraser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button android:text="Clear" android:onClick="clearCanvas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button android:text="Save" android:onClick="saveDrawing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button android:text="Load" android:onClick="loadDrawing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- SHAPES -->
+            <Button android:text="Rectangle" android:onClick="setRectangle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button android:text="Circle" android:onClick="setCircle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button android:text="Line" android:onClick="setLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button android:text="Polygon" android:onClick="setPolygon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- TEXT -->
+            <Button android:text="Text" android:onClick="setText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- DRAWING AREA -->
+    <com.example.whiteboardapps.DrawingView
+        android:id="@+id/drawingView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#FFFFFF"/>
+
+</LinearLayout>

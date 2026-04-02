@@ -1,0 +1,140 @@
+# 🖍 Whiteboard App (Android - Kotlin)
+
+## 📌 Overview
+
+This project is a Whiteboard Application built using Kotlin for Android devices, specifically designed for Interactive Flat Panels (IFPs). The application allows users to draw, insert shapes, add text, and save/load their work locally in JSON format.
+
+---
+
+## ✨ Features
+
+### 🎨 Drawing
+
+* Smooth freehand drawing using Android Canvas & Path
+* Adjustable stroke width and color
+
+### 🧼 Eraser
+
+* Pixel-based erasing using touch input
+
+### 🔺 Shapes
+
+* Rectangle
+* Circle
+* Line
+* Drag to draw and resize
+
+### 🔠 Text
+
+* Tap anywhere to insert text
+* Input via popup dialog
+* Custom position rendering
+
+### 💾 Save & Load
+
+* Save whiteboard data as `.json`
+* Load saved drawings
+* Fully offline support
+
+---
+
+## 📂 JSON Structure
+
+```json
+{
+  "strokes": [
+    {
+      "points": [[x, y], ...],
+      "color": "#RRGGBB",
+      "width": 5
+    }
+  ],
+  "shapes": [
+    {
+      "type": "rectangle",
+      "startX": 10,
+      "startY": 10,
+      "endX": 100,
+      "endY": 100,
+      "color": "#000000"
+    }
+  ],
+  "texts": [
+    {
+      "text": "Hello",
+      "x": 200,
+      "y": 300,
+      "color": "#000000",
+      "size": 40
+    }
+  ]
+}
+```
+
+---
+
+## 🛠 Tech Stack
+
+* Kotlin
+* Android Canvas, Paint, Path
+* Gson (JSON Serialization)
+
+---
+
+## 🧠 Architecture
+
+* Custom `DrawingView` for rendering canvas
+* Modular separation of:
+
+  * Drawing logic
+  * Data models
+  * UI interactions
+
+---
+
+## 📱 Device Support
+
+* Optimized for large screens (IFP devices)
+* Landscape orientation supported
+* Touch-based interaction
+
+---
+
+## ▶️ How to Run
+
+1. Open project in Android Studio
+2. Connect Android device or emulator
+3. Click **Run ▶️**
+
+---
+
+## 📁 Project Structure
+
+```
+app/
+ ├── java/com.example.whiteboardapps/
+ │   ├── DrawingView.kt
+ │   ├── MainActivity.kt
+ ├── res/layout/activity_main.xml
+```
+
+---
+
+## 📦 Sample Files
+
+Check `sample_json/` folder for example saved whiteboards.
+
+---
+
+## 🚀 Future Improvements
+
+* Undo / Redo functionality
+* Zoom & Pan support
+* Export as PNG image
+* Better UI/UX for large screens
+
+---
+
+## 👨‍💻 Author
+
+Durgesh Patil
